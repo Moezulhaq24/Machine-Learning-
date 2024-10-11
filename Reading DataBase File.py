@@ -7,3 +7,9 @@ mydb = mysql.connector.connect(
     database = "company"
 )
 
+if mydb.is_connected():
+    print("Connection is Successfull")
+
+else:
+    print("Could'nt Connected")
+
