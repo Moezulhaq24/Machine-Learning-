@@ -35,4 +35,6 @@ def loadFiles():
     return df
 
 
+data = loadFiles()
+data
 
