@@ -17,14 +17,19 @@ data = response["data"]
 ids = []
 emails = []
 
-# Printing only the id's and email of the persons from the data
+# Storing data in the list
 for datum in data:
     ids.append(datum['id'])
     emails.append(datum['email'])
 
-for id in ids:
-    print(id)
+# Printing only the id's and email of the persons from the data
+# for id in ids:
+#     print(id)
 
-for email in emails:
-    print(email)
+# for email in emails:
+#     print(email)
 
+
+# Printing the email and id of a person side by side from a website using api 
+for email,id in zip(emails,ids):
+    print(f"ID: {id}, Email: {email}")
