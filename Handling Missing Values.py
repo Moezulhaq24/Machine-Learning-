@@ -56,5 +56,6 @@ df["Age_Interpolated"] = df["Age"].interpolate(method="linear")
 # Forward Fill
 
 df["FFill_Age"] = df["Age"].fillna(df["Age"].ffill())
-df["FFill_Salary"] = df["Age"].fillna(df["Age"].ffill())
+df["FFill_Salary"] = df["Age"].fillna(df["Salary"].ffill())
 print(df)
+
