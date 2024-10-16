@@ -10,4 +10,11 @@ employee_data = {
 }
 
 df = pd.DataFrame(employee_data)
+# print(df)
+
+# Mean Imputation
+
+mean_imputed_age = df["Age"].mean()
+# print(mean_imputed_age)
+df["Mean_Age_Imputed"] = df["Age"].fillna(mean_imputed_age)
 print(df)
