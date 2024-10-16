@@ -15,6 +15,9 @@ df = pd.DataFrame(employee_data)
 # Mean Imputation
 
 mean_imputed_age = df["Age"].mean()
+mean_imputed_salary = df["Salary"].mean()
 # print(mean_imputed_age)
 df["Mean_Age_Imputed"] = df["Age"].fillna(mean_imputed_age)
+df["Mean_Salary_Imputed"] = df["Salary"].fillna(mean_imputed_salary)
 print(df)
+
