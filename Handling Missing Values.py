@@ -17,8 +17,8 @@ df = pd.DataFrame(employee_data)
 mean_imputed_age = df["Age"].mean()
 mean_imputed_salary = df["Salary"].mean()
 # print(mean_imputed_age)
-df["Mean_Age_Imputed"] = df["Age"].fillna(mean_imputed_age)
-df["Mean_Salary_Imputed"] = df["Salary"].fillna(mean_imputed_salary)
+# df["Mean_Age_Imputed"] = df["Age"].fillna(mean_imputed_age)
+# df["Mean_Salary_Imputed"] = df["Salary"].fillna(mean_imputed_salary)
 # print(df)
 
 
@@ -26,12 +26,17 @@ df["Mean_Salary_Imputed"] = df["Salary"].fillna(mean_imputed_salary)
 
 mediun_imputed_age = df["Age"].median()
 mediun_imputed_salary = df["Salary"].median()
-df["Medium_Age_Imputed"] = df["Age"].fillna(mediun_imputed_age)
-df["Medium_Salary_Imputed"] = df["Salary"].fillna(mediun_imputed_salary)
+# df["Medium_Age_Imputed"] = df["Age"].fillna(mediun_imputed_age)
+# df["Medium_Salary_Imputed"] = df["Salary"].fillna(mediun_imputed_salary)
 # print(df)
 
 # Mode Imputation
 
-mode_imputed_dep = df["Department"].mode()
-df["Mode_Dep_Imputed"] = df["Department"].fillna(mode_imputed_dep)
-print(df)
+# mode_imputed_dep = df["Department"].mode()
+# df["Mode_Dep_Imputed"] = df["Department"].fillna(mode_imputed_dep)
+# print(df)
+
+# Removing Rows
+
+df_drop_rows = df.dropna()
+print(df_drop_rows)
