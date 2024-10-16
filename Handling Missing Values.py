@@ -28,4 +28,10 @@ mediun_imputed_age = df["Age"].median()
 mediun_imputed_salary = df["Salary"].median()
 df["Medium_Age_Imputed"] = df["Age"].fillna(mediun_imputed_age)
 df["Medium_Salary_Imputed"] = df["Salary"].fillna(mediun_imputed_salary)
+# print(df)
+
+# Mode Imputation
+
+mode_imputed_dep = df["Department"].mode()
+df["Mode_Dep_Imputed"] = df["Department"].fillna(mode_imputed_dep)
 print(df)
