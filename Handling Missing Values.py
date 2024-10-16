@@ -49,6 +49,12 @@ df["Age_Interpolated"] = df["Age"].interpolate(method="linear")
 
 # Spline Interpolation
 
-df["Salary_Spline_Interpolated"] = df["Salary"].interpolate(method="spline",order = 2)
-df["Age_Spline_Interpolated"] = df["Age"].interpolate(method="spline",order = 2)
+# df["Salary_Spline_Interpolated"] = df["Salary"].interpolate(method="spline",order = 2)
+# df["Age_Spline_Interpolated"] = df["Age"].interpolate(method="spline",order = 2)
+# print(df)
+
+# Forward Fill
+
+df["FFill_Age"] = df["Age"].fillna(df["Age"].ffill())
+df["FFill_Salary"] = df["Age"].fillna(df["Age"].ffill())
 print(df)
