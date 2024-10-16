@@ -45,5 +45,10 @@ df_drop_rows = df.dropna()
 
 df["Salary_Interpolated"] = df["Salary"].interpolate(method="linear")
 df["Age_Interpolated"] = df["Age"].interpolate(method="linear")
-print(df)
+# print(df)
 
+# Spline Interpolation
+
+df["Salary_Spline_Interpolated"] = df["Salary"].interpolate(method="spline",order = 2)
+df["Age_Spline_Interpolated"] = df["Age"].interpolate(method="spline",order = 2)
+print(df)
