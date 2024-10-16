@@ -19,5 +19,13 @@ mean_imputed_salary = df["Salary"].mean()
 # print(mean_imputed_age)
 df["Mean_Age_Imputed"] = df["Age"].fillna(mean_imputed_age)
 df["Mean_Salary_Imputed"] = df["Salary"].fillna(mean_imputed_salary)
-print(df)
+# print(df)
 
+
+#Median Imputation
+
+mediun_imputed_age = df["Age"].median()
+mediun_imputed_salary = df["Salary"].median()
+df["Medium_Age_Imputed"] = df["Age"].fillna(mediun_imputed_age)
+df["Medium_Salary_Imputed"] = df["Salary"].fillna(mediun_imputed_salary)
+print(df)
